@@ -1,0 +1,20 @@
+{% extends 'cocktails/base.html' %}
+{% block title %}Search{% endblock title %}
+
+{% block content %}
+    <div class="container-fluid" style="margin-top:40px;">
+        <div class="row">
+            <div class="col">
+                <h1 class="d-flex justify-content-center align-items-center">Search Results</h1>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col'>
+                {% for list in mixeddrinks_list  %}
+                 <a class="cocktail_ls" href="{% url 'cocktailsdetail' list.pk %}">{{ forloop.counter }}. {{ list.name }}</a><br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

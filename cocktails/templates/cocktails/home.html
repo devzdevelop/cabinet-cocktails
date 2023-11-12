@@ -1,0 +1,125 @@
+{% extends 'cocktails/base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'cocktails/style.css' %}">
+{% endblock head %}
+{% block content %}
+  <!--Header--> 
+  <div
+  id="header"
+  class=" text-center bg-image"
+  style="background-image: url('https://mybartender.com/wp-content/uploads/2023/06/sweet-cocktails-1024x576.png');height:50vh;"
+  >
+  <div class="mask">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white">
+        <h1 class="mb-3">Welcome to Cocktails Cabinet!</h1>
+        <h5 class="mb-4">Design your own cocktails</h5>
+        <a
+          class="head-btn btn btn-outline-light btn-lg m-2"
+          href="{% url 'featuredcocktailslist' %}"
+          role="button"
+          rel="nofollow"
+        >Our Featured Cocktails</a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!--Section 1-->
+  <section class="steps container-custom">
+
+    <div class="row">
+      <div class="col-12 col-sm-6 d-md-flex justify-content-md-center">
+        <img src="https://media.timeout.com/images/105619705/1920/1080/image.jpg" class="img-fluid pb-4 steps__section-thumnail" 
+        alt="cocktail magic" width="600" height="400" loading="lazy">
+      </div>
+
+      <div class="col-12 col-sm-6 align-self-center justify-content-md-center">
+
+        <div class="steps__content-width">
+          <span>01</span>
+          <h1 class="h2 mb-4">Become A Today Pro!</h1>
+          <p class="mb-4">Learn how to make world-class cocktails in the comfort of your own space.</p>
+          <a class="text-decoration-none text-info" href="{% url 'cocktailslist' %}">Learn Now <i class="bi bi-arrow-right-short"></i></a>
+        </div>
+
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="steps container-custom">
+
+    <div class="row">
+      <div class="col-12 col-sm-6 d-md-flex justify-content-md-center order-sm-1">
+        <img src="https://cf.ltkcdn.net/cocktails/images/std/252523-800x602r1-friends-making-cocktails.webp" class="img-fluid pb-4 steps__section-thumnail" 
+        alt="cocktail magic" width="600" height="400" loading="lazy">
+      </div>
+
+      <div class="col-12 col-sm-6 align-self-center justify-content-md-center">
+
+        <div class="steps__content-width">
+          <span>02</span>
+          <h1 class="h2 mb-4">Impress Your Friends!</h1>
+          <p class="mb-4">Create famous cocktails for your friends that taste great!.</p>
+          <a class="text-decoration-none text-info" href="{% url 'cocktailslist' %}">Learn Now <i class="bi bi-arrow-right-short"></i></a>
+        </div>
+
+      </div>
+    </div>
+    
+  </section>
+{% endblock content %}
+
+
+  <!--
+    <div 
+    class="master-head"
+    style="background-image: url('https://mybartender.com/wp-content/uploads/2023/06/sweet-cocktails-1024x576.png');"
+    >
+        <div class="color-overlay d-flex justify-content-center align-items-center text-black">
+            <h1 class="master-head-text">Welcome to Cabinet Cocktails!</h1>
+        </div>
+    </div>
+  -->
+
+
+<!--
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-12 p-0">
+        <div class="header">
+          <img src="https://img.freepik.com/free-photo/fresh-cocktails-with-ice-lemon-lime-fruits-generative-ai_188544-12370.jpg" class="img-fluid" alt="Responsive image">
+          <div class="centered-text">
+            <h1 class="text-dark bg-white" style="">Welcome To The Cocktails Cabinet!</h1>
+            <p>Additional description if needed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-12 p-0">
+          <p>f</p>
+        </div>
+      </div>
+  </div>
+-->
+
+
+
+
+
+
+<!--
+    <div class="container d-flex justify-content-center  align-items-center">
+    <div class="row bg-danger">
+        <div class="col bg-light">
+            <img src="https://img.freepik.com/free-photo/fresh-cocktails-with-ice-lemon-lime-fruits-generative-ai_188544-12370.jpg" class="img-fluid" alt="Responsive image">
+            <h1 class="text-dark bg-white" style="">Welcome To The Cocktails Cabinet!</h1>
+        </div>
+    </div>
+</div>
+-->

@@ -1,0 +1,14 @@
+{% extends 'cocktails/base.html' %}
+{% block content %}
+    <div class="container-fluid" style="margin-top:40px;">
+        <div class="row bg-white">
+            <div class="col">
+                <h1 class="d-flex justify-content-center align-items-center">Featured Cocktails: <span class="badge bg-secondary"></span></h1>  
+                {% for list in featuredmixeddrinks_list  %}
+                 <a class="cocktail_ls" style="margin-left:10px;" href="{% url 'cocktailsdetail' list.name.pk %}">{{ forloop.counter }}. {{ list.name.name }}</a><br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+

@@ -1,0 +1,54 @@
+{% extends 'cocktails/base.html' %}
+{% block content %}
+
+{% if user.is_authenticated %}
+<div class="container-fluid crudContainer">
+    <div class="row">
+        <div class="col-2"  style="text-align: right;">
+            <h6><a class="crud font-italic text-decoration-none text-dark" href="{% url 'editcocktail' object.pk %}">Edit Cocktail </a></h6>
+        </div>
+        
+        <div class="col-2">
+            <h6><a class="crud font-italic text-decoration-none text-dark" href="{% url 'deletecocktail' object.pk %}">Delete Cocktail </a></h6>
+        </div>
+    </div>
+</div>
+{% endif%}
+
+    <div class="container   d-flex justify-content-center" style="margin-top:40px;">
+        <div class="row bg-white">
+            <div class="col">
+               <div class="row">
+                    <div class="col">
+                        <h1 class="text-dark">Cocktail: {{ mixeddrinks.name }} <span class="badge bg-secondary"></span></h1><hr>
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col">
+                        <h2 class="text-decoration-underline" style="margin-top:45px;">Ingredients: <span class="badge bg-secondary"></span></h2><br>
+                        <h5>{{ mixeddrinks.recipe|linebreaksbr|safe }}<span class="badge bg-secondary"></span></h5>
+                    </div>
+               </div>
+               <div class="row">
+                <div class="col">
+                    <h2 class="text-decoration-underline" style="margin-top:45px;">Garnishes: <span class="badge bg-secondary"></span></h2><br>
+                    <h5>{{ mixeddrinks.garnishes|linebreaksbr|safe }}<span class="badge bg-secondary"></span></h5>
+                    </div>
+               <div class="row" style="margin-bottom:20px;">
+                <div class="col">
+                    <h2 class="text-decoration-underline" style="margin-top:45px;">Final Look: <span class="badge bg-secondary"></span></h2><br>
+                    <div class="card" style="width:18rem;">
+                        <img class="default-image" src="{{ object.image }}" class="card-img-top" alt="..."></img>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+
+ 
+
+
